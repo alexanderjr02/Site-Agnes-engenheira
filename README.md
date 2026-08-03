@@ -8,12 +8,14 @@ regularização e patologia da construção. Atendimento no DF e entorno.
 
 | Arquivo | Responsabilidade |
 | --- | --- |
-| `index.html` | Estrutura e conteúdo da página (a foto da Agnes continua embutida em base64) |
+| `index.html` | Estrutura e conteúdo da página |
 | `styles.css` | Toda a estilização (variáveis de cor, tipografia, seções, responsivo) |
 | `script.js` | Comportamento (nav ao rolar, menu mobile, FAQ sanfona, animação de entrada) |
+| `assets/agnes.jpg` | Foto da Agnes usada na seção "Sobre" e na prévia de compartilhamento |
 
-Os três ficam na raiz do projeto e se referenciam por caminho relativo — basta manter
-os arquivos juntos. Não há build, dependência ou instalação.
+Tudo se referencia por caminho relativo — basta manter os arquivos juntos, com a
+pasta `assets/` ao lado do `index.html`. Não há build, dependência ou instalação:
+abrir o `index.html` no navegador já mostra a página como ela vai ao ar.
 
 ## Como publicar no GitHub Pages
 
@@ -24,9 +26,9 @@ os arquivos juntos. Não há build, dependência ou instalação.
 5. Em cerca de um minuto o site fica no ar em:
    `https://alexanderjr02.github.io/Site-Agnes-engenheira/`
 
-Depois de publicado, atualize no `index.html` as tags que ainda apontam para
-`https://SEU-DOMINIO.com.br/` (`canonical`, `og:url`, `og:image` e o `url` do JSON-LD)
-com o endereço final.
+As tags de SEO e compartilhamento (`canonical`, `og:url`, `og:image` e o `url` do
+JSON-LD) já apontam para esse endereço. Se um dia o site mudar para domínio próprio,
+troque essas quatro no `index.html`.
 
 ## Ainda a fazer
 
