@@ -9,6 +9,7 @@ regularização e patologia da construção. Atendimento no DF e entorno.
 | Arquivo | Responsabilidade |
 | --- | --- |
 | `index.html` | Estrutura e conteúdo da página |
+| `privacidade.html` | Política de privacidade, linkada no rodapé |
 | `styles.css` | Toda a estilização (variáveis de cor, tipografia, seções, responsivo) |
 | `script.js` | Comportamento (nav ao rolar, menu mobile, FAQ sanfona, vídeos, animação de entrada) |
 | `assets/logo-mark.webp` | Símbolo da logo em dourado, usado no topo e no rodapé |
@@ -63,7 +64,11 @@ que acontece se ninguém olhar. Foto sem leitura técnica é só foto de parede.
 ## Ainda a fazer
 
 - Inserir os depoimentos reais de clientes (2 espaços já reservados na seção "Depoimentos").
-- Confirmar número de CREA para exibir como selo de confiança.
+- Conferir com a Agnes se o CREA-DF 35749/D está correto. O número veio da política de
+  privacidade que ela publicou e hoje aparece na faixa de credenciais, no "Sobre",
+  no rodapé, no card de compartilhamento e nos dados estruturados.
+- A política de privacidade foi transposta do Notion dela para `privacidade.html`.
+  Se ela editar o original, o site não atualiza sozinho.
 - Pedir o arquivo vetorial da logo (.ai, .eps ou .svg). O símbolo em uso hoje foi
   recortado do PNG e recolorido; com o vetor ele fica perfeito em qualquer tamanho.
 - Avaliar um serviço novo na grade: projeto de prevenção e combate a incêndio.
