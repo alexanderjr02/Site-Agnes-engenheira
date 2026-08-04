@@ -1,0 +1,7 @@
+# Originais enviados pelo WhatsApp: já foram convertidos para os arquivos
+# finais em assets/ (ev-*.webp, agnes.webp, poster-*.webp, vistoria-*.mp4).
+# Ficam na sua máquina, fora do repositório, para não pesar o site.
+assets/WhatsApp*
+
+# Saída de ferramenta de teste em navegador
+.playwright-mcp/

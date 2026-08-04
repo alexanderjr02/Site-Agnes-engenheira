@@ -18,6 +18,7 @@
   --white:#F6F8FA;
   --r:14px;
   --maxw:1180px;
+  --mark:#C4212A;   /* vermelho do adesivo de marcação usado em campo */
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -94,6 +95,7 @@ header.scrolled{background:rgba(11,19,30,.82);backdrop-filter:blur(14px);border-
 .chip{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;color:var(--muted);
   border:1px solid var(--line);border-radius:100px;padding:9px 16px;background:rgba(20,32,47,.4)}
 .chip svg{width:17px;height:17px;color:var(--gold);flex:0 0 17px}
+.chip-av{width:25px;height:25px;flex:0 0 25px;border-radius:50%;object-fit:cover;object-position:50% 30%;border:1px solid rgba(201,162,75,.55)}
 
 /* hero card / blueprint visual */
 .blueprint{
@@ -110,7 +112,7 @@ header.scrolled{background:rgba(11,19,30,.82);backdrop-filter:blur(14px);border-
 .bp-house svg{width:100%;max-width:260px;height:auto}
 .bp-foot{position:relative;border-top:1px solid var(--line);padding-top:16px}
 .bp-foot .t{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--white)}
-.bp-foot .s{font-size:13.5px;color:var(--muted);margin-top:4px}
+.bp-foot .s{font-size:13.5px;color:var(--muted);margin-top:4px;max-width:66%}  /* deixa o selo dourado livre */
 .bp-badge{position:absolute;right:-16px;bottom:38px;z-index:3;background:var(--gold);color:var(--ink);
   border-radius:12px;padding:14px 18px;box-shadow:0 20px 40px -14px rgba(201,162,75,.7);max-width:190px}
 .bp-badge .bt{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
@@ -159,6 +161,66 @@ section{position:relative}
 .pillar h4{font-family:'Hanken Grotesk';font-size:15.5px;font-weight:700;color:var(--white);margin-bottom:6px}
 .pillar p{font-size:13.5px;color:var(--muted);line-height:1.5}
 
+/* ---------- evidências ----------
+   O anel de marcação fica em cima do defeito via --mx/--my definidos no HTML.
+   Nas fotos que já têm o adesivo vermelho, o anel abraça o adesivo real. */
+.evid{background:var(--midnight)}
+.evid h2 em{font-style:italic;color:var(--gold);font-weight:400}
+.ev-rail{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ev{
+  position:relative;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--navy-2);overflow:hidden;transition:border-color .35s,transform .35s;
+}
+.ev:hover,.ev:focus-visible{border-color:rgba(201,162,75,.55);transform:translateY(-4px)}
+.ev:focus-visible{outline:1px solid var(--gold);outline-offset:2px}
+.ev-top{position:relative;overflow:hidden}
+.ev-ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#0d1724}
+.ev-ph img{
+  width:100%;height:100%;object-fit:cover;
+  filter:saturate(.72) brightness(.84);
+  transition:filter .5s ease,transform .8s cubic-bezier(.2,.7,.2,1);
+}
+.ev:hover .ev-ph img,.ev:focus-within .ev-ph img{filter:none;transform:scale(1.04)}
+
+.ev-mark{
+  position:absolute;left:var(--mx);top:var(--my);
+  width:23%;aspect-ratio:1;transform:translate(-50%,-50%);
+  border:1.5px solid var(--mark);border-radius:50%;
+  pointer-events:none;z-index:2;
+}
+/* miras do alvo, no espírito do desenho técnico do hero */
+.ev-mark::before{
+  content:"";position:absolute;inset:-16%;
+  background:
+    linear-gradient(var(--mark),var(--mark)) 50% 0/1px 20% no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 50% 100%/1px 20% no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 0 50%/20% 1px no-repeat,
+    linear-gradient(var(--mark),var(--mark)) 100% 50%/20% 1px no-repeat;
+  opacity:.85;
+}
+.ev-mark::after{content:"";position:absolute;inset:-1px;border:1px solid var(--mark);border-radius:50%;opacity:0}
+.ev.in .ev-mark::after{animation:mkpulse 3s cubic-bezier(.2,.7,.2,1) infinite}
+@keyframes mkpulse{
+  0%{transform:scale(1);opacity:.75}
+  65%{transform:scale(1.85);opacity:0}
+  100%{transform:scale(1.85);opacity:0}
+}
+
+.ev-read{
+  position:absolute;left:0;right:0;bottom:0;z-index:3;
+  padding:40px 18px 18px;
+  background:linear-gradient(to top,rgba(11,19,30,.97) 62%,rgba(11,19,30,0));
+  transform:translateY(101%);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1);
+}
+.ev:hover .ev-read,.ev:focus-within .ev-read{transform:translateY(0)}
+.ev-read p{font-size:13.5px;line-height:1.55;color:#D5DEE7}
+
+.ev-body{padding:16px 18px 20px}
+.ev-tag{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.ev-body h3{font-size:1.02rem;line-height:1.24;color:var(--white);margin-top:8px}
+.ev-note{margin-top:26px;font-size:12.5px;color:var(--muted-2);max-width:640px}
+
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
 .portrait{
@@ -206,6 +268,58 @@ section{position:relative}
 .final h2{font-size:clamp(2.2rem,4.6vw,3.6rem);max-width:800px;margin:22px auto 22px}
 .final h2 em{font-style:italic;color:var(--gold);font-weight:400}
 .final p{color:var(--muted);font-size:1.15rem;max-width:540px;margin:0 auto 38px}
+
+/* ---------- bastidores em vídeo (dentro do "como funciona") ---------- */
+.vidwrap{margin-top:70px;border-top:1px solid rgba(11,19,30,.14);padding-top:44px}
+.vid-head{display:flex;align-items:baseline;gap:10px 26px;flex-wrap:wrap;margin-bottom:26px}
+.vid-head h3{font-size:1.55rem;color:var(--ink)}
+.vid-head p{font-size:14.5px;color:#55636f}
+.vids{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.vid{
+  position:relative;border-radius:var(--r);overflow:hidden;background:#0B131E;
+  border:1px solid rgba(11,19,30,.12);box-shadow:0 22px 44px -30px rgba(11,19,30,.9);
+}
+.vid video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#0B131E}
+.vid-btn{
+  position:absolute;inset:0;width:100%;border:0;padding:0;background:transparent;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;z-index:2;
+}
+.vid-btn span{
+  width:54px;height:54px;border-radius:50%;background:var(--gold);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 16px 34px -12px rgba(11,19,30,.9);transition:transform .25s,opacity .3s;
+}
+.vid-btn span svg{width:22px;height:22px}
+.vid-btn:hover span{transform:scale(1.09)}
+.vid-btn:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
+.i-pause{display:none}
+.vid.on .i-play{display:none}
+.vid.on .i-pause{display:block}
+.vid.on .vid-btn span{opacity:0}
+.vid.on:hover .vid-btn span,.vid.on .vid-btn:focus-visible span{opacity:1}
+.vid-sound{
+  position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;z-index:3;
+  border:1px solid rgba(246,248,250,.3);background:rgba(11,19,30,.55);color:#F6F8FA;
+  display:none;align-items:center;justify-content:center;cursor:pointer;
+}
+.vid-sound svg{width:19px;height:19px}
+.vid.on .vid-sound{display:flex}
+.vid-sound:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.i-slash{display:none}
+.vid.mute .i-slash{display:block}
+.vid.mute .i-wave{display:none}
+.vid-cap{
+  position:absolute;left:0;right:0;bottom:0;z-index:1;pointer-events:none;
+  padding:44px 14px 13px;color:#EDF1F5;font-size:12.5px;line-height:1.38;
+  background:linear-gradient(to top,rgba(11,19,30,.94) 45%,rgba(11,19,30,0));
+  transition:opacity .3s;
+}
+.vid-cap b{
+  display:block;font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:9.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:5px;
+}
+.vid.on .vid-cap{opacity:0}
+.vid.on:hover .vid-cap{opacity:1}
 
 /* ---------- social proof ---------- */
 .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -264,6 +378,15 @@ footer{background:var(--midnight);border-top:1px solid var(--line);padding:64px 
 .rev.in{opacity:1;transform:none}
 
 /* ---------- responsive ---------- */
+@media(max-width:1080px){
+  .navlinks{gap:24px}
+  .navlinks a{font-size:13.5px}
+  .navlinks .nav-md{display:none}
+  .ev-rail{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:820px){
+  .ev-rail,.vids{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:960px){
   .hero-inner{grid-template-columns:1fr;gap:44px}
   .blueprint{max-width:420px;margin:0 auto}
@@ -289,6 +412,27 @@ footer{background:var(--midnight);border-top:1px solid var(--line);padding:64px 
   .step:not(:last-child)::after{display:none}
   .hero-stats{gap:26px}
   .bp-badge{right:8px;bottom:8px}
+  /* no celular vira trilho horizontal: card grande o bastante para a fissura aparecer */
+  .ev-rail,.vids{
+    display:flex;overflow-x:auto;gap:14px;scroll-snap-type:x mandatory;
+    margin:0 -20px;padding:0 20px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  }
+  .ev-rail::-webkit-scrollbar,.vids::-webkit-scrollbar{display:none}
+  .ev{flex:0 0 78%;scroll-snap-align:center}
+  .vid{flex:0 0 62%;scroll-snap-align:center}
+  .vidwrap{margin-top:54px;padding-top:36px}
+}
+/* toque ou tela estreita: sem hover, o diagnóstico desce para baixo da foto
+   em vez de cobri-la, e a evidência continua inteira à vista */
+@media(hover:none),(max-width:640px){
+  .ev-ph img{filter:saturate(.9) brightness(.94)}
+  .ev-top{overflow:visible}
+  .ev-read{position:static;transform:none;background:none;padding:15px 18px 0}
+  .ev-read p{color:var(--muted)}
+  .ev:hover,.ev:focus-visible{transform:none}
+  .ev-body{padding-top:13px}
+  .vid-cap,.vid.on .vid-cap{opacity:1}
+  .vid.on .vid-btn span{opacity:0}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}

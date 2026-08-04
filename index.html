@@ -18,7 +18,10 @@
 <meta property="og:title" content="New World Engenharia · Vistorias e Laudos Técnicos no DF">
 <meta property="og:description" content="O detalhe que protege o seu patrimônio. Vistoria de imóvel, inspeção predial e avaliação com laudo técnico assinado por engenheira civil. DF e entorno.">
 <meta property="og:url" content="https://alexanderjr02.github.io/Site-Agnes-engenheira/">
-<meta property="og:image" content="https://alexanderjr02.github.io/Site-Agnes-engenheira/assets/agnes.jpg">
+<meta property="og:image" content="https://alexanderjr02.github.io/Site-Agnes-engenheira/assets/share-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Agnes Vanessa, Engenheira Civil da New World Engenharia. O detalhe que protege o seu patrimônio.">
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Dados estruturados para o Google entender que é um negocio local -->
@@ -56,7 +59,8 @@
     </a>
     <nav class="navlinks" id="navlinks">
       <a href="#servicos">Serviços</a>
-      <a href="#protecao">Por que vistoriar</a>
+      <a href="#evidencias">Evidências</a>
+      <a href="#protecao" class="nav-md">Por que vistoriar</a>
       <a href="#sobre">Sobre</a>
       <a href="#depoimentos">Depoimentos</a>
       <a href="#processo">Como funciona</a>
@@ -92,7 +96,7 @@
           <!-- Dica: se a Agnes tiver um numero real de vistorias/anos, troque um destes chips por ele. Ex.: "+300 vistorias realizadas" -->
           <span class="chip"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2l6 2.5v4C16 13 13.5 16 10 17.5 6.5 16 4 13 4 8.5v-4z"/><path d="M7.5 10l1.8 1.8L13 8"/></svg>Laudo com ART registrada</span>
           <span class="chip"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 2C6.7 2 4 4.7 4 8c0 4 6 10 6 10s6-6 6-10c0-3.3-2.7-6-6-6z"/><circle cx="10" cy="8" r="2"/></svg>Brasília, DF e entorno</span>
-          <span class="chip"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="7" r="3.4"/><path d="M4 17c.6-3.4 3-4.8 6-4.8s5.4 1.4 6 4.8"/></svg>Engenheira Civil responsável</span>
+          <span class="chip"><img class="chip-av" src="assets/agnes-avatar.webp" width="240" height="240" decoding="async" alt="">Agnes Vanessa · Engenheira Civil responsável</span>
         </div>
       </div>
 
@@ -251,12 +255,119 @@
   </div>
 </section>
 
+<!-- ============ EVIDÊNCIAS ============ -->
+<!-- Cada card usa --mx/--my para posicionar o alvo em cima do defeito real da foto.
+     Nas fotos que já têm o adesivo vermelho, o anel cai exatamente sobre ele. -->
+<section class="sec evid" id="evidencias">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <span class="eyebrow">Evidências de campo</span>
+      <h2>O que o olho técnico <em>enxerga</em>.</h2>
+      <p>Todo ponto vermelho é um achado real, marcado na parede antes da foto e descrito no laudo. Estas são vistorias de verdade, não imagem de banco.</p>
+    </div>
+
+    <div class="ev-rail">
+
+      <article class="ev rev" tabindex="0" style="--mx:64%;--my:35%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-01.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Viga de concreto com o cobrimento desprendido e a armadura de aço exposta e corroída">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>O cobrimento se desprendeu e o aço ficou exposto ao ar. A ferrugem expande, empurra o concreto e acelera o próprio processo. Aqui não é estética: é perda de seção resistente.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-01 · Estrutura</span><h3>Armadura exposta e corroída</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:50%;--my:41%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-02.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Trinca escalonada em parede interna, descendo do teto até a janela e passando pelo batente da porta">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>Desce em degraus acompanhando as fiadas de bloco e abre justamente nos cantos de porta e janela. Esse desenho é assinatura de recalque de fundação, não de acabamento mal feito.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-02 · Fundação</span><h3>Trinca escalonada nas juntas</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:56%;--my:50%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-03.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Trinca diagonal na fachada, do beiral até o canto superior da esquadria da janela">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>O canto da janela concentra tensão e é onde a alvenaria cede primeiro. Do lado de fora, a abertura deixa de ser só trinca e vira caminho de água para dentro da parede.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-03 · Fachada</span><h3>Trinca no canto da esquadria</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:53%;--my:49%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-04.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Fissura capilar em parede clara, ao lado de uma esquadria com acúmulo escuro no peitoril">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>Fina o suficiente para sumir na pintura e ninguém notar na visita. Junto do acúmulo escuro no peitoril, aponta infiltração já ativa naquele encontro de parede e janela.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-04 · Vedação</span><h3>Fissura capilar junto à esquadria</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:50%;--my:50%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-05.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Fissura vertical em parede interna, marcada com adesivo circular vermelho durante a vistoria">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>Localizada, marcada e fotografada com referência no próprio local. Marcar é o que permite voltar daqui a seis meses e responder a pergunta que importa: ela está parada ou está crescendo?</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-05 · Alvenaria</span><h3>Fissura vertical em parede interna</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:43%;--my:50%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-06.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Fissura em parede descendo até o batente de madeira da porta, marcada com adesivo vermelho">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>Percorre a parede e morre no encontro com a porta. Batente que emperra e porta que desalinha costumam ser o mesmo problema, só que visto por dentro.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-06 · Esquadria</span><h3>Fissura descendo até o batente</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:60.5%;--my:50%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-07.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Rejunte rompido entre placas cerâmicas de parede, marcado com adesivo vermelho">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>A trinca atravessou o revestimento cerâmico inteiro, o que indica movimento vindo da base e não falha de assentamento. Em área molhada, é porta aberta para a água chegar na estrutura.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-07 · Revestimento</span><h3>Rejunte rompido entre placas</h3></div>
+      </article>
+
+      <article class="ev rev" tabindex="0" style="--mx:28%;--my:50%">
+        <div class="ev-top">
+          <div class="ev-ph">
+            <img src="assets/ev-08.webp" width="880" height="1100" loading="lazy" decoding="async" alt="Bolhas e descolamento de pintura na base de uma parede, marcados com adesivo vermelho">
+            <span class="ev-mark" aria-hidden="true"></span>
+          </div>
+          <div class="ev-read"><p>A tinta descola porque existe umidade empurrando por trás. Pintar por cima resolve por uma estação e devolve o problema na chuva seguinte, porque a origem continua ali.</p></div>
+        </div>
+        <div class="ev-body"><span class="ev-tag">EV-08 · Umidade</span><h3>Bolhas de pintura na base da parede</h3></div>
+      </article>
+
+    </div>
+
+    <p class="ev-note">Registros de vistorias realizadas. Imagens publicadas com autorização e sem qualquer identificação de endereço ou proprietário.</p>
+  </div>
+</section>
+
 <!-- ============ ABOUT ============ -->
 <section class="sec about" id="sobre">
   <div class="wrap">
     <div class="about-grid">
       <div class="portrait reg rev">
-        <img src="assets/agnes.jpg" alt="Agnes Vanessa, Engenheira Civil da New World Engenharia">
+        <img src="assets/agnes.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Agnes Vanessa, Engenheira Civil da New World Engenharia">
       </div>
       <div class="rev">
         <span class="eyebrow">Quem assina o seu laudo</span>
@@ -339,6 +450,77 @@
       <div class="step rev"><div class="sn">02</div><h3>Visita técnica</h3><p>Vou até o imóvel e realizo a vistoria com metodologia, registro fotográfico e medições.</p></div>
       <div class="step rev"><div class="sn">03</div><h3>Laudo técnico</h3><p>Elaboro o relatório com análise, evidências e recomendações claras, sem juridiquês.</p></div>
       <div class="step rev"><div class="sn">04</div><h3>Entrega</h3><p>Você recebe o documento pronto para usar em negociação, cobrança ou registro.</p></div>
+    </div>
+
+    <!-- Bastidores: vídeo só carrega no clique (data-src), o poster segura a vez -->
+    <div class="vidwrap rev">
+      <div class="vid-head">
+        <h3>A vistoria acontecendo</h3>
+        <p>Sem produção e sem ator: é o trabalho como ele é no dia.</p>
+      </div>
+      <div class="vids">
+
+        <div class="vid mute">
+          <video poster="assets/poster-01.webp" data-src="assets/vistoria-01.mp4" preload="none" muted loop playsinline></video>
+          <button class="vid-btn" aria-label="Reproduzir: marcação de fissura em parede interna">
+            <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
+          </button>
+          <button class="vid-sound" aria-label="Ativar som">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
+              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
+              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
+            </svg>
+          </button>
+          <div class="vid-cap"><b>0:29 · Marcação</b>Localizando e marcando uma fissura em parede interna.</div>
+        </div>
+
+        <div class="vid mute">
+          <video poster="assets/poster-02.webp" data-src="assets/vistoria-02.mp4" preload="none" muted loop playsinline></video>
+          <button class="vid-btn" aria-label="Reproduzir: visita técnica em canteiro de obra">
+            <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
+          </button>
+          <button class="vid-sound" aria-label="Ativar som">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
+              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
+              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
+            </svg>
+          </button>
+          <div class="vid-cap"><b>0:18 · Visita técnica</b>Percorrendo o terreno com o responsável pela obra.</div>
+        </div>
+
+        <div class="vid mute">
+          <video poster="assets/poster-03.webp" data-src="assets/vistoria-03.mp4" preload="none" muted loop playsinline></video>
+          <button class="vid-btn" aria-label="Reproduzir: inspeção em campo">
+            <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
+          </button>
+          <button class="vid-sound" aria-label="Ativar som">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
+              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
+              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
+            </svg>
+          </button>
+          <div class="vid-cap"><b>0:18 · Inspeção</b>Levantamento em campo, item por item, com quem responde pelo imóvel.</div>
+        </div>
+
+        <div class="vid mute">
+          <video poster="assets/poster-04.webp" data-src="assets/vistoria-04.mp4" preload="none" muted loop playsinline></video>
+          <button class="vid-btn" aria-label="Reproduzir: conferência de projeto">
+            <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
+          </button>
+          <button class="vid-sound" aria-label="Ativar som">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
+              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
+              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
+            </svg>
+          </button>
+          <div class="vid-cap"><b>0:09 · Projeto</b>Conferindo a planta antes de pisar no imóvel.</div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
