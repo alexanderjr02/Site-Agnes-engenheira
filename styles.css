@@ -325,17 +325,6 @@ section{position:relative}
 .vid.on .i-pause{display:block}
 .vid.on .vid-btn span{opacity:0}
 .vid.on:hover .vid-btn span,.vid.on .vid-btn:focus-visible span{opacity:1}
-.vid-sound{
-  position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;z-index:3;
-  border:1px solid rgba(246,248,250,.3);background:rgba(11,19,30,.55);color:#F6F8FA;
-  display:none;align-items:center;justify-content:center;cursor:pointer;
-}
-.vid-sound svg{width:19px;height:19px}
-.vid.on .vid-sound{display:flex}
-.vid-sound:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.i-slash{display:none}
-.vid.mute .i-slash{display:block}
-.vid.mute .i-wave{display:none}
 .vid-cap{
   position:absolute;left:0;right:0;bottom:0;z-index:1;pointer-events:none;
   padding:44px 14px 13px;color:#EDF1F5;font-size:12.5px;line-height:1.38;

@@ -89,6 +89,10 @@ primeiro lugar. Na ordem de impacto:
    avisa o Google que a página existe, em vez de esperar ele descobrir sozinho.
 - Regravar os vídeos direto do celular, sem passar pelo WhatsApp. Os atuais chegaram
   comprimidos em 464x832 e é o teto de qualidade que dá para tirar deles.
+- Os quatro vídeos atuais não têm faixa de áudio nenhuma (verificado nos arquivos:
+  zero trilha de som, zero codec de áudio). Por isso não existe botão de som na
+  página. Se chegarem versões com áudio, dá para reativar: um botão dentro de
+  `.vid` que alterne `video.muted` e apareça só quando o vídeo estiver tocando.
 - Guardar por escrito a autorização de uso de imagem dos imóveis fotografados.
 
 ## Contato do negócio

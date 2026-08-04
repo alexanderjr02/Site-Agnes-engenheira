@@ -24,7 +24,7 @@ const sync=card=>{
 const parar=card=>{const v=card.querySelector('video');if(!v.paused)v.pause();sync(card)};
 
 vids.forEach(card=>{
-  const v=card.querySelector('video'),btn=card.querySelector('.vid-btn'),snd=card.querySelector('.vid-sound');
+  const v=card.querySelector('video'),btn=card.querySelector('.vid-btn');
   btn.dataset.desc=btn.getAttribute('aria-label').replace(/^Reproduzir:\s*/,'');
   btn.addEventListener('click',()=>{
     if(v.paused){
@@ -35,12 +35,6 @@ vids.forEach(card=>{
   });
   ['play','pause','ended'].forEach(ev=>v.addEventListener(ev,()=>sync(card)));
   sync(card);
-  snd.addEventListener('click',e=>{
-    e.stopPropagation();
-    v.muted=!v.muted;
-    card.classList.toggle('mute',v.muted);
-    snd.setAttribute('aria-label',v.muted?'Ativar som':'Desativar som');
-  });
 });
 // saiu da tela, para de tocar
 const vio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)parar(e.target)}),{threshold:.25});

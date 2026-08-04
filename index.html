@@ -541,7 +541,9 @@
       <div class="step rev"><div class="sn">04</div><h3>Entrega</h3><p>Você recebe o documento pronto para usar em negociação, cobrança ou registro.</p></div>
     </div>
 
-    <!-- Bastidores: vídeo só carrega no clique (data-src), o poster segura a vez -->
+    <!-- Bastidores: vídeo só carrega no clique (data-src), o poster segura a vez.
+         Os quatro arquivos não têm faixa de áudio, por isso não existe controle de som.
+         Se chegarem versões com áudio, ver a nota no README para reativar. -->
     <div class="vidwrap rev">
       <div class="vid-head">
         <h3>O trabalho acontecendo</h3>
@@ -549,62 +551,34 @@
       </div>
       <div class="vids">
 
-        <div class="vid mute">
+        <div class="vid">
           <video poster="assets/poster-01.webp" data-src="assets/vistoria-01.mp4" preload="none" muted loop playsinline></video>
           <button class="vid-btn" aria-label="Reproduzir: diagnóstico de fissura em parede interna">
             <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
           </button>
-          <button class="vid-sound" aria-label="Ativar som">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
-              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
-              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
-            </svg>
-          </button>
           <div class="vid-cap"><b>0:29 · Diagnóstico</b>Lendo a fissura para achar a causa. É a origem do movimento que define a solução, não o tamanho da abertura.</div>
         </div>
 
-        <div class="vid mute">
+        <div class="vid">
           <video poster="assets/poster-02.webp" data-src="assets/vistoria-02.mp4" preload="none" muted loop playsinline></video>
           <button class="vid-btn" aria-label="Reproduzir: visita a obra industrial de frigorífico">
             <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
           </button>
-          <button class="vid-sound" aria-label="Ativar som">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
-              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
-              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
-            </svg>
-          </button>
           <div class="vid-cap"><b>0:18 · Obra industrial</b>Visita a obra de frigorífico para levantar o projeto de prevenção e combate a incêndio.</div>
         </div>
 
-        <div class="vid mute">
+        <div class="vid">
           <video poster="assets/poster-03.webp" data-src="assets/vistoria-03.mp4" preload="none" muted loop playsinline></video>
           <button class="vid-btn" aria-label="Reproduzir: levantamento para o projeto de prevenção e combate a incêndio">
             <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
           </button>
-          <button class="vid-sound" aria-label="Ativar som">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
-              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
-              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
-            </svg>
-          </button>
           <div class="vid-cap"><b>0:18 · Projeto de incêndio</b>Conferindo acessos, saídas e layout no próprio local, com a equipe da obra.</div>
         </div>
 
-        <div class="vid mute">
+        <div class="vid">
           <video poster="assets/poster-04.webp" data-src="assets/vistoria-04.mp4" preload="none" muted loop playsinline></video>
           <button class="vid-btn" aria-label="Reproduzir: análise do projeto de uma escola">
             <span><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path class="i-play" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span>
-          </button>
-          <button class="vid-sound" aria-label="Ativar som">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M4 9.5v5h3.6L12 18V6L7.6 9.5H4z" fill="currentColor" stroke="none"/>
-              <path class="i-wave" d="M15.6 8.8a4.4 4.4 0 0 1 0 6.4"/>
-              <path class="i-slash" d="M16 9.2l5 5.6M21 9.2l-5 5.6"/>
-            </svg>
           </button>
           <div class="vid-cap"><b>0:09 · Escola</b>Estudando a planta de uma escola antes de ir a campo.</div>
         </div>
