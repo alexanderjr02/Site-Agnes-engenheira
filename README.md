@@ -11,6 +11,10 @@ regularização e patologia da construção. Atendimento no DF e entorno.
 | `index.html` | Estrutura e conteúdo da página |
 | `styles.css` | Toda a estilização (variáveis de cor, tipografia, seções, responsivo) |
 | `script.js` | Comportamento (nav ao rolar, menu mobile, FAQ sanfona, vídeos, animação de entrada) |
+| `assets/logo-mark.webp` | Símbolo da logo em dourado, usado no topo e no rodapé |
+| `assets/favicon.png` | Ícone da aba do navegador |
+| `assets/apple-touch-icon.png` | Ícone de atalho na tela inicial do iPhone |
+| `assets/logo-original-*.png` | Arquivos de marca originais, não usados pela página |
 | `assets/agnes.webp` | Retrato da Agnes na seção "Sobre" |
 | `assets/agnes-avatar.webp` | Recorte circular do rosto, usado no chip do topo |
 | `assets/share-card.jpg` | Imagem 1200x630 que aparece ao colar o link no WhatsApp |
@@ -59,8 +63,11 @@ que acontece se ninguém olhar. Foto sem leitura técnica é só foto de parede.
 ## Ainda a fazer
 
 - Inserir os depoimentos reais de clientes (2 espaços já reservados na seção "Depoimentos").
-- Colocar a logo oficial (PNG) no topo e no rodapé, no lugar do ícone atual.
 - Confirmar número de CREA para exibir como selo de confiança.
+- Pedir o arquivo vetorial da logo (.ai, .eps ou .svg). O símbolo em uso hoje foi
+  recortado do PNG e recolorido; com o vetor ele fica perfeito em qualquer tamanho.
+- Avaliar um serviço novo na grade: projeto de prevenção e combate a incêndio.
+  Dois dos quatro vídeos mostram esse trabalho e a página ainda não o vende.
 - Regravar os vídeos direto do celular, sem passar pelo WhatsApp. Os atuais chegaram
   comprimidos em 464x832 e é o teto de qualidade que dá para tirar deles.
 - Guardar por escrito a autorização de uso de imagem dos imóveis fotografados.

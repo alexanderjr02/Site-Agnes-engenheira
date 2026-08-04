@@ -58,7 +58,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;transition:.35s}
 header.scrolled{background:rgba(11,19,30,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
 .brand{display:flex;align-items:center;gap:12px;font-family:'Fraunces',serif;font-size:20px;letter-spacing:.02em}
-.brand .globe{width:30px;height:30px;flex:0 0 30px}
+.brand .globe{width:34px;height:34px;flex:0 0 34px}  /* marca oficial: precisa de mais corpo que o icone antigo */
 .brand small{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin-top:2px;font-weight:500}
 .navlinks{display:flex;gap:34px;align-items:center}
 .navlinks a{font-size:14.5px;color:var(--muted);transition:.2s;font-weight:500}
