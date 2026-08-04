@@ -10,6 +10,8 @@ regularização e patologia da construção. Atendimento no DF e entorno.
 | --- | --- |
 | `index.html` | Estrutura e conteúdo da página |
 | `privacidade.html` | Política de privacidade, linkada no rodapé |
+| `robots.txt` | Libera o rastreamento e aponta o sitemap |
+| `sitemap.xml` | Lista as páginas para o Google. Atualize a data ao publicar mudanças |
 | `styles.css` | Toda a estilização (variáveis de cor, tipografia, seções, responsivo) |
 | `script.js` | Comportamento (nav ao rolar, menu mobile, FAQ sanfona, vídeos, animação de entrada) |
 | `assets/logo-mark.webp` | Símbolo da logo em dourado, usado no topo e no rodapé |
@@ -71,8 +73,20 @@ que acontece se ninguém olhar. Foto sem leitura técnica é só foto de parede.
   Se ela editar o original, o site não atualiza sozinho.
 - Pedir o arquivo vetorial da logo (.ai, .eps ou .svg). O símbolo em uso hoje foi
   recortado do PNG e recolorido; com o vetor ele fica perfeito em qualquer tamanho.
-- Avaliar um serviço novo na grade: projeto de prevenção e combate a incêndio.
-  Dois dos quatro vídeos mostram esse trabalho e a página ainda não o vende.
+
+## O que só a Agnes pode fazer (e vale mais que o site)
+
+O trabalho de SEO da página está feito, mas ele sozinho não coloca ninguém em
+primeiro lugar. Na ordem de impacto:
+
+1. **Criar o Perfil da Empresa no Google** (antigo Google Meu Negócio). É de graça
+   e é o que aparece no bloco do mapa, acima dos resultados normais, em buscas do
+   tipo "engenheiro para vistoria perto de mim". Sem isso, o site disputa só a
+   parte de baixo da página de resultados.
+2. **Pedir avaliação no Google a cada cliente atendido.** Avaliação empurra o
+   perfil para cima no mapa e convence quem lê, as duas coisas ao mesmo tempo.
+3. **Cadastrar o site no Google Search Console** e enviar o `sitemap.xml`. É o que
+   avisa o Google que a página existe, em vez de esperar ele descobrir sozinho.
 - Regravar os vídeos direto do celular, sem passar pelo WhatsApp. Os atuais chegaram
   comprimidos em 464x832 e é o teto de qualidade que dá para tirar deles.
 - Guardar por escrito a autorização de uso de imagem dos imóveis fotografados.

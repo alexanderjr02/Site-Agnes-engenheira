@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alexanderjr02.github.io/Site-Agnes-engenheira/sitemap.xml

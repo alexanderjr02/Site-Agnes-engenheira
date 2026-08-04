@@ -148,6 +148,28 @@ section{position:relative}
 .svc h3{font-size:1.4rem;margin-bottom:10px;color:var(--white)}
 .svc p{font-size:15px;color:var(--muted);line-height:1.62}
 
+/* card largo do servico para empresa */
+.svc-wide{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;
+  padding:34px 34px 32px;background:linear-gradient(120deg,var(--navy-2),rgba(201,162,75,.07))}
+.svc-wide .num{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:11px}
+.svc-wide h3{margin:14px 0 10px;max-width:22ch}
+.svc-wide p{max-width:62ch}
+.svc-wide-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.svc-wide-tags span{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold-soft);border:1px solid var(--line);border-radius:100px;padding:6px 13px}
+.svc-wide-cta{display:flex;flex-direction:column;align-items:center;gap:20px;flex:0 0 auto}
+.svc-wide-cta .ico{width:52px;height:52px;color:var(--gold);margin:0;opacity:.85}
+
+/* ---------- area de atendimento ---------- */
+.areas{background:var(--midnight);padding-bottom:96px}
+.areas-head{max-width:680px;margin-bottom:38px}
+.areas-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem);margin:20px 0 16px}
+.areas-head p{color:var(--muted);font-size:1.05rem}
+.areas-list{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.areas-list li{font-size:13.5px;color:var(--muted);border:1px solid var(--line);border-radius:100px;
+  padding:8px 16px;background:rgba(20,32,47,.45);transition:.25s}
+.areas-list li:hover{border-color:var(--gold);color:var(--white)}
+
 /* ---------- protection band ---------- */
 .protect{background:var(--midnight);position:relative;overflow:hidden}
 .protect .pill-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -430,6 +452,10 @@ footer{background:var(--midnight);border-top:1px solid var(--line);padding:64px 
   .sec{padding:76px 0}
   .final{padding:84px 0}
   .svc-grid,.steps,.pillars,.foot-grid,.proof-grid{grid-template-columns:1fr}
+  .svc-wide{grid-template-columns:1fr;gap:26px;padding:30px 26px}
+  .svc-wide-cta{flex-direction:row;justify-content:flex-start;align-items:center}
+  .svc-wide-cta .ico{width:40px;height:40px}
+  .areas{padding-bottom:72px}
   .step:not(:last-child)::after{display:none}
   .hero-stats{gap:26px}
   .bp-badge{right:8px;bottom:8px}
