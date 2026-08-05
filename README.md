@@ -31,12 +31,12 @@ abrir o `index.html` no navegador já mostra a página como ela vai ao ar.
 
 ## Hospedagem e domínio
 
-O site é publicado pelo **GitHub Pages** a partir da branch `main`, na raiz.
-Cada `git push` vai ao ar sozinho em cerca de um minuto. Não há build nem servidor.
+O site é publicado pela **Vercel**, a partir da branch `main`. É estático puro:
+não há `package.json`, build nem servidor, então a Vercel apenas serve os arquivos.
 
-O domínio é **newworldengenharia.com.br**, registrado no Registro.br, apontado para
-o GitHub por quatro registros `A` na raiz e um `CNAME` no `www`. O arquivo `CNAME`
-na raiz do repositório é o que diz ao GitHub qual domínio atende.
+O domínio é **newworldengenharia.com.br**, registrado no Registro.br. Os registros
+de DNS apontam para a Vercel, e os valores exatos estão no painel da Vercel, em
+Settings → Domains, porque a Vercel personaliza o endereço por projeto.
 
 Todos os endereços absolutos (`canonical`, `og:url`, `og:image`, o JSON-LD,
 `sitemap.xml` e `robots.txt`) já apontam para o domínio próprio. Se o domínio mudar
