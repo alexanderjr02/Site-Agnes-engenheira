@@ -3,5 +3,10 @@
 # Ficam na sua máquina, fora do repositório, para não pesar o site.
 assets/WhatsApp*
 
+# Prints dos depoimentos: o texto foi transcrito para o site, mas a imagem tem
+# foto de perfil e nome de terceiros. Repositorio publico = imagem publica,
+# entao os prints ficam de fora. Guarde-os como comprovacao de autenticidade.
+assets/depoimento-*
+
 # Saída de ferramenta de teste em navegador
 .playwright-mcp/

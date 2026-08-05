@@ -339,16 +339,17 @@ section{position:relative}
 .vid.on:hover .vid-cap{opacity:1}
 
 /* ---------- social proof ---------- */
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+/* depoimentos tem tamanhos bem diferentes: altura natural em vez de esticar,
+   senao os curtos ficam com um vao morto antes da assinatura */
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
 .quote{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 26px;
   background:var(--navy-2);display:flex;flex-direction:column;gap:18px}
 .quote .q-mark{font-family:'Fraunces',serif;font-size:3.4rem;line-height:.5;color:var(--gold);opacity:.55;height:26px}
-.quote blockquote{font-size:16.5px;line-height:1.55;color:var(--white);flex:1}
-.quote.is-empty blockquote{color:var(--muted-2);font-style:italic;font-size:15px}
+.quote blockquote{font-size:15.5px;line-height:1.68;color:var(--white);flex:1}
 .quote figcaption{display:flex;align-items:center;gap:13px;border-top:1px solid var(--line);padding-top:18px}
 .q-av{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:rgba(201,162,75,.14);border:1px solid var(--gold);
-  color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.15rem}
-.quote.is-empty .q-av{background:transparent;border-style:dashed;color:var(--muted-2);border-color:var(--muted-2)}
+  color:var(--gold);display:flex;align-items:center;justify-content:center;
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:.04em}
 .q-who{display:flex;flex-direction:column;line-height:1.3}
 .q-who strong{font-family:'Hanken Grotesk';font-size:14.5px;font-weight:700;color:var(--white)}
 .q-who em{font-family:'IBM Plex Mono',monospace;font-style:normal;font-size:11px;letter-spacing:.06em;color:var(--muted-2);text-transform:uppercase;margin-top:3px}

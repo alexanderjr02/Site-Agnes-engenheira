@@ -65,7 +65,13 @@ que acontece se ninguém olhar. Foto sem leitura técnica é só foto de parede.
 
 ## Ainda a fazer
 
-- Inserir os depoimentos reais de clientes (2 espaços já reservados na seção "Depoimentos").
+- Confirmar com os três clientes que eles autorizam o nome no site. Os depoimentos
+  chegaram por WhatsApp, que é conversa privada; publicar o nome é outra coisa.
+- Os prints dos depoimentos ficam fora do repositório de propósito: têm foto de
+  perfil e nome de terceiros, e repositório público significa imagem pública.
+  Guarde os arquivos como comprovação de que os textos são reais.
+- Dois depoimentos citam serviços que a grade não vende: projeto arquitetônico e
+  assessoria para alvará. Vale decidir se entram como serviço.
 - Conferir com a Agnes se o CREA-DF 35749/D está correto. O número veio da política de
   privacidade que ela publicou e hoje aparece na faixa de credenciais, no "Sobre",
   no rodapé, no card de compartilhamento e nos dados estruturados.
