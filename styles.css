@@ -339,13 +339,27 @@ section{position:relative}
 .vid.on:hover .vid-cap{opacity:1}
 
 /* ---------- social proof ---------- */
-/* depoimentos tem tamanhos bem diferentes: altura natural em vez de esticar,
-   senao os curtos ficam com um vao morto antes da assinatura */
+/* Os tres depoimentos tem 493, 847 e 562 caracteres. Para a grade fechar
+   alinhada, todos aparecem com a mesma quantidade de linhas e o restante abre
+   no clique. Assim nenhum texto e cortado e nenhum card fica maior que o outro. */
 .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
 .quote{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 26px;
-  background:var(--navy-2);display:flex;flex-direction:column;gap:18px}
+  background:var(--navy-2);display:flex;flex-direction:column;gap:18px;
+  transition:border-color .25s,background .25s}
+.quote:hover{border-color:rgba(201,162,75,.4)}
 .quote .q-mark{font-family:'Fraunces',serif;font-size:3.4rem;line-height:.5;color:var(--gold);opacity:.55;height:26px}
-.quote blockquote{font-size:15.5px;line-height:1.68;color:var(--white);flex:1}
+.quote blockquote{font-size:15.5px;line-height:1.68;color:var(--white);
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:9;overflow:hidden}
+.quote.aberto blockquote{-webkit-line-clamp:unset;overflow:visible}
+
+.q-more{align-self:flex-start;background:none;border:0;padding:0;cursor:pointer;
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);display:inline-flex;align-items:center;gap:9px;transition:color .2s}
+.q-more::after{content:"";width:16px;height:1px;background:currentColor;transition:width .25s}
+.q-more:hover{color:var(--gold-soft)}
+.q-more:hover::after{width:26px}
+.q-more:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:2px}
+.q-more[hidden]{display:none}
 .quote figcaption{display:flex;align-items:center;gap:13px;border-top:1px solid var(--line);padding-top:18px}
 .q-av{width:42px;height:42px;flex:0 0 42px;border-radius:50%;background:rgba(201,162,75,.14);border:1px solid var(--gold);
   color:var(--gold);display:flex;align-items:center;justify-content:center;

@@ -40,6 +40,22 @@ vids.forEach(card=>{
 const vio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)parar(e.target)}),{threshold:.25});
 vids.forEach(c=>vio.observe(c));
 
+// depoimentos: o texto vem cortado em 9 linhas para a grade fechar alinhada.
+// O botao so aparece em quem realmente tem mais texto do que cabe.
+document.querySelectorAll('.quote').forEach(card=>{
+  const txt=card.querySelector('blockquote'),btn=card.querySelector('.q-more');
+  if(!btn)return;
+  const sobra=()=>txt.scrollHeight>txt.clientHeight+1;
+  const avaliar=()=>{if(!card.classList.contains('aberto'))btn.hidden=!sobra()};
+  avaliar();
+  addEventListener('resize',avaliar);
+  btn.addEventListener('click',()=>{
+    const aberto=card.classList.toggle('aberto');
+    btn.textContent=aberto?'Mostrar menos':'Ler completo';
+    btn.setAttribute('aria-expanded',aberto);
+  });
+});
+
 // reveal on scroll
 const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rev').forEach((el,i)=>{el.style.transitionDelay=(i%3*80)+'ms';io.observe(el)});
