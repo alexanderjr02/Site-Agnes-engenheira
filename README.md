@@ -29,18 +29,22 @@ Tudo se referencia por caminho relativo — basta manter os arquivos juntos, com
 pasta `assets/` ao lado do `index.html`. Não há build, dependência ou instalação:
 abrir o `index.html` no navegador já mostra a página como ela vai ao ar.
 
-## Como publicar no GitHub Pages
+## Hospedagem e domínio
 
-1. Suba os arquivos para o repositório (branch `main`, na raiz).
-2. No GitHub: **Settings → Pages**.
-3. Em *Build and deployment*, escolha **Deploy from a branch**.
-4. Selecione a branch `main` e a pasta `/ (root)`, e clique em **Save**.
-5. Em cerca de um minuto o site fica no ar em:
-   `https://alexanderjr02.github.io/Site-Agnes-engenheira/`
+O site é publicado pelo **GitHub Pages** a partir da branch `main`, na raiz.
+Cada `git push` vai ao ar sozinho em cerca de um minuto. Não há build nem servidor.
 
-As tags de SEO e compartilhamento (`canonical`, `og:url`, `og:image` e o `url` do
-JSON-LD) já apontam para esse endereço. Se um dia o site mudar para domínio próprio,
-troque essas quatro no `index.html`.
+O domínio é **newworldengenharia.com.br**, registrado no Registro.br, apontado para
+o GitHub por quatro registros `A` na raiz e um `CNAME` no `www`. O arquivo `CNAME`
+na raiz do repositório é o que diz ao GitHub qual domínio atende.
+
+Todos os endereços absolutos (`canonical`, `og:url`, `og:image`, o JSON-LD,
+`sitemap.xml` e `robots.txt`) já apontam para o domínio próprio. Se o domínio mudar
+de novo, troque em todos eles de uma vez:
+
+```bash
+grep -rn "newworldengenharia.com.br" --include="*.html" --include="*.xml" --include="*.txt"
+```
 
 ## Como acrescentar uma evidência nova
 
@@ -79,6 +83,13 @@ que acontece se ninguém olhar. Foto sem leitura técnica é só foto de parede.
   Se ela editar o original, o site não atualiza sozinho.
 - Pedir o arquivo vetorial da logo (.ai, .eps ou .svg). O símbolo em uso hoje foi
   recortado do PNG e recolorido; com o vetor ele fica perfeito em qualquer tamanho.
+- Regravar os vídeos direto do celular, sem passar pelo WhatsApp. Os atuais chegaram
+  comprimidos em 464x832 e é o teto de qualidade que dá para tirar deles.
+- Os quatro vídeos atuais não têm faixa de áudio nenhuma (verificado nos arquivos:
+  zero trilha de som, zero codec de áudio). Por isso não existe botão de som na
+  página. Se chegarem versões com áudio, dá para reativar: um botão dentro de
+  `.vid` que alterne `video.muted` e apareça só quando o vídeo estiver tocando.
+- Guardar por escrito a autorização de uso de imagem dos imóveis fotografados.
 
 ## O que só a Agnes pode fazer (e vale mais que o site)
 
@@ -93,13 +104,7 @@ primeiro lugar. Na ordem de impacto:
    perfil para cima no mapa e convence quem lê, as duas coisas ao mesmo tempo.
 3. **Cadastrar o site no Google Search Console** e enviar o `sitemap.xml`. É o que
    avisa o Google que a página existe, em vez de esperar ele descobrir sozinho.
-- Regravar os vídeos direto do celular, sem passar pelo WhatsApp. Os atuais chegaram
-  comprimidos em 464x832 e é o teto de qualidade que dá para tirar deles.
-- Os quatro vídeos atuais não têm faixa de áudio nenhuma (verificado nos arquivos:
-  zero trilha de som, zero codec de áudio). Por isso não existe botão de som na
-  página. Se chegarem versões com áudio, dá para reativar: um botão dentro de
-  `.vid` que alterne `video.muted` e apareça só quando o vídeo estiver tocando.
-- Guardar por escrito a autorização de uso de imagem dos imóveis fotografados.
+   Cadastre já com o domínio próprio, não com o endereço antigo do github.io.
 
 ## Contato do negócio
 
