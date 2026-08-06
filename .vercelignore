@@ -1,0 +1,14 @@
+# Nada aqui deve chegar ao servidor.
+# Os prints de depoimento tem foto de perfil e nome de terceiros; os originais
+# do WhatsApp ja viraram os arquivos finais em assets/. Publicar por engano
+# seria expor imagem de cliente, entao a exclusao e explicita e nao depende
+# do .gitignore.
+assets/WhatsApp*
+assets/depoimento-*
+assets/agnes-original.jpeg
+assets/logo-original-*.png
+
+.vercel
+.env*
+.git
+.playwright-mcp/

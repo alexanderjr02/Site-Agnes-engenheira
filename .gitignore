@@ -10,3 +10,6 @@ assets/depoimento-*
 
 # Saída de ferramenta de teste em navegador
 .playwright-mcp/
+
+.vercel
+.env*
