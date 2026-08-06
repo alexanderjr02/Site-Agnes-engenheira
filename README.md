@@ -31,12 +31,27 @@ abrir o `index.html` no navegador já mostra a página como ela vai ao ar.
 
 ## Hospedagem e domínio
 
-O site é publicado pela **Vercel**, a partir da branch `main`. É estático puro:
-não há `package.json`, build nem servidor, então a Vercel apenas serve os arquivos.
+O site é publicado pelo **GitHub Pages**, a partir da branch `main`, na raiz.
+Cada `git push` vai ao ar sozinho em cerca de um minuto. Não há build nem servidor.
 
-O domínio é **newworldengenharia.com.br**, registrado no Registro.br. Os registros
-de DNS apontam para a Vercel, e os valores exatos estão no painel da Vercel, em
-Settings → Domains, porque a Vercel personaliza o endereço por projeto.
+O endereço oficial é **https://www.newworldengenharia.com.br** (com `www`), e é
+esse que está no `canonical`, no `og:url`, no JSON-LD e no `sitemap.xml`. O
+domínio raiz redireciona para o `www`.
+
+O domínio é registrado no **Registro.br**, em modo avançado de zona, com quatro
+registros `A` e quatro `AAAA` na raiz apontando para os IPs do GitHub Pages, mais
+um `CNAME` no `www` para `alexanderjr02.github.io`. O arquivo `CNAME` na raiz do
+repositório é o que faz o GitHub reconhecer o domínio: **se ele sumir, o site
+responde 404 mesmo com o DNS correto.**
+
+O `vercel.json` fica no repositório sem efeito nenhum aqui. Só serve se um dia o
+site voltar para a Vercel.
+
+Se o domínio mudar, troque em todos os endereços de uma vez:
+
+```bash
+grep -rn "newworldengenharia.com.br" --include="*.html" --include="*.xml" --include="*.txt" CNAME
+```
 
 Todos os endereços absolutos (`canonical`, `og:url`, `og:image`, o JSON-LD,
 `sitemap.xml` e `robots.txt`) já apontam para o domínio próprio. Se o domínio mudar
