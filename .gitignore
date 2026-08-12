@@ -14,5 +14,5 @@ assets/depoimento-*
 .vercel
 .env*
 
-# Guia em PDF gerado localmente, nao faz parte do site
-Guia-Perfil-Google-New-World.pdf
+# Guias em PDF gerados localmente para a Agnes, nao fazem parte do site
+Guia-*.pdf
