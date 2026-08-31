@@ -490,3 +490,8 @@ footer{background:var(--midnight);border-top:1px solid var(--line);padding:64px 
   .rev{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+
+/* O registro profissional nunca pode quebrar linha no hifen: partido, o
+   "CREA-DF" vira "CREA-" numa linha e "DF" na outra, e parece que o
+   estado ficou de fora. */
+.nowrap{white-space:nowrap}
